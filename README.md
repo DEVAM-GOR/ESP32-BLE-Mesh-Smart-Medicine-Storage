@@ -13,6 +13,24 @@ This project is a smart IoT-based medicine storage monitoring system using ESP32
 Watch the working demo here:
 👉 https://drive.google.com/file/d/1f_mQ5gFi0ASkOhQcSh9SohPEBXPu874n/view
 
+## System Architecture
+
+
+[Node 1: LDR + Relay]        [Node 2: DHT22 + Servo]
+           │                           │
+           └────── BLE Mesh ───────────┘
+                         │
+                [Gateway ESP32]
+        (BLE Mesh Client + WiFi + MQTT)
+                         │
+               WiFi + MQTTS (TLS)
+                         │
+                 [Anedya Cloud]
+        (Dashboard + Database + Commands)
+
+
+Sensor Nodes → BLE Mesh → Gateway → MQTT → Cloud  
+Cloud Commands → Gateway → BLE Mesh → Nodes
 
 ---
 
