@@ -1,0 +1,14 @@
+{
+  "node1_on": {
+    "nodeId": "DEVAM1010",
+    "command": "relay_on",
+    "data": "{ \"command\": \"node1_on\" }",
+    "type": "string"
+  },
+  "node2_on": {
+    "nodeId": "DEVAM1010",
+    "command": "servo_on",
+    "data": "{ \"command\": \"node2_on\" }",
+    "type": "string"
+  }
+}
