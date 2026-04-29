@@ -41,9 +41,11 @@ static uint8_t dev_uuid[16] = {
     0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x01
 };
 static esp_ble_mesh_cfg_srv_t config_server = {
-    .relay=ESP_BLE_MESH_RELAY_ENABLED,.beacon=ESP_BLE_MESH_BEACON_ENABLED,
+    .relay=ESP_BLE_MESH_RELAY_ENABLED,
+    .beacon=ESP_BLE_MESH_BEACON_ENABLED,
     .friend_state=ESP_BLE_MESH_FRIEND_NOT_SUPPORTED,
-    .gatt_proxy=ESP_BLE_MESH_GATT_PROXY_ENABLED,.default_ttl=7,
+    .gatt_proxy=ESP_BLE_MESH_GATT_PROXY_ENABLED,
+    .default_ttl=7,
     .net_transmit=ESP_BLE_MESH_TRANSMIT(2,20),
     .relay_retransmit=ESP_BLE_MESH_TRANSMIT(2,20),
 };
